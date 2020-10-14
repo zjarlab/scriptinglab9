@@ -1,0 +1,10 @@
+<mat-form-field>
+    <mat-label>TODO</mat-label>
+    <input matInput placeholder="TODO" type="text" [(ngModel)]="things">
+  </mat-form-field>
+<button mat-button color="accent" (click)="addToDo()">Add todo</button>
+<!--
+<p>{{ things }}</p>
+-->
+<br>
+<p *ngFor="let dos of listOfThings"><mat-card><mat-card-title>{{ dos }}</mat-card-title></mat-card></p>

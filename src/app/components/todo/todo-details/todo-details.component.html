@@ -1,0 +1,20 @@
+<mat-form-field>
+    <mat-label>Date</mat-label>
+    <input matInput placeholder="Date" type="text" [(ngModel)]="date">
+</mat-form-field>
+<br>
+<mat-form-field>
+    <mat-label>Content</mat-label>
+    <input matInput placeholder="content" type="text" [(ngModel)]="description" size="100">
+</mat-form-field>
+<!-- 
+<p>{{ date }}</p>
+<p>{{ description }}</p>
+-->
+<button mat-button color="accent" (click)="addDetails()">Add details</button>
+<p *ngFor="let id of listOfId">
+    <mat-card><mat-card-subtitle>{{ id }}</mat-card-subtitle>
+    <mat-card-content>{{ listOfDescription[id] }}</mat-card-content>
+    <mat-card-actions>{{ listOfDates[id] }}</mat-card-actions>
+    </mat-card>
+</p>
