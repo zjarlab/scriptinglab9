@@ -1,0 +1,22 @@
+<br>
+<mat-form-field>
+    <mat-label>ID</mat-label>
+    <input matInput placeholder="ID" type="text" [(ngModel)]="id">
+</mat-form-field>
+<mat-form-field>
+    <mat-label>Date</mat-label>
+    <input matInput placeholder="Date" type="text" [(ngModel)]="date">
+</mat-form-field>
+<mat-form-field>
+    <mat-label>Title</mat-label>
+    <input matInput placeholder="Title" type="text" [(ngModel)]="title">
+</mat-form-field>
+<mat-form-field>
+    <mat-label>Title</mat-label>
+    <input matInput placeholder="Description" type="text" [(ngModel)]="description">
+</mat-form-field>
+<br>
+<button mat-button color="accent" (click)="addTodo()">Save
+</button>
+<br>
+<button mat-button color="accent" (click)="removeTodo()">Delete the oldest entry</button>

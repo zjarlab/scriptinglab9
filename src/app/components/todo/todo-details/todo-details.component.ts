@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TodoService } from 'src/app/todo.service';
 
 @Component({
   selector: 'app-todo-details',
@@ -7,21 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodoDetailsComponent implements OnInit {
 
-  constructor() { }
+  todoDetails
+  constructor(private todoServ : TodoService) { } //dependency injection
 
   ngOnInit(): void {
-  }
-  date:string;
-  id:number=0;
-  description:string;
-  listOfDates=[];
-  listOfId=[];
-  listOfDescription=[];
-  addDetails()
-  {
-    this.id+=1;
-    this.listOfId.push(this.id);
-    this.listOfDescription.push(this.description);
-    this.listOfDates.push(this.date);
+    //instantiated everytime the component is created
+    this.todoDetails = this.todoServ.todoDetails
   }
 }
